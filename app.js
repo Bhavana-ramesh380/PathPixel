@@ -93,8 +93,9 @@ app.all("@FNC SUSHIL OP", (req, res, next) => {
 });
 
 app.get("/", (req, res) => {
-  res.send("Welcome to the homepage!");
+  res.redirect("/listings");
 });
+
 
 app.use((err, req, res, next) => {
   let { status= 500, message = "some error occurred"} = err;
