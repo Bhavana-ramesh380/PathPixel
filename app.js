@@ -21,7 +21,6 @@ const listingRouter = require("./routes/listing.js");
 const reviewsRouter = require("./routes/review.js");
 const usersRouter = require("./routes/user.js");
 
-const dbUrl = process.env.ATLASDB_URL;
 
 main()
     .then(() => {
@@ -32,7 +31,7 @@ main()
     });
 
 async function main() {
-    await mongoose.connect(dbUrl);
+    await mongoose.connect(process.env.ATLASDB_URL);
 }
 
 app.set("view engine", "ejs");
