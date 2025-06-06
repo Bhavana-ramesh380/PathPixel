@@ -42,7 +42,7 @@ app.engine("ejs", ejsMate);
 app.use(express.static(path.join(__dirname, "/public")));
 
 const store = MongoStore.create({
-  mongoUrl :process.env.ATLASDB_URL,
+  mongoUrl : process.env.ATLASDB_URL,
   crypto: {
     secret: process.env.SECRET,
   },
@@ -98,7 +98,9 @@ app.use((err, req, res, next) => {
   res.status(status).render("error.ejs", {message});
 });
 
-app.listen(8080, () => {
-    console.log("server is listening to port 8080");
+
+const port = process.env.PORT || 8080;
+app.listen(port, () => {
+    console.log(`server is listening to port ${port}`);
 });
 
