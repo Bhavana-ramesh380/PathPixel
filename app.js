@@ -92,6 +92,9 @@ app.all("@FNC SUSHIL OP", (req, res, next) => {
   next(new ExpressError(404, "Page Not Found!"));
 });
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the homepage!");
+});
 
 app.use((err, req, res, next) => {
   let { status= 500, message = "some error occurred"} = err;
