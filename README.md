@@ -38,3 +38,20 @@ npm install
 
 # Start the server
 npm start
+
+Then open your browser and visit:
+👉 http://localhost:3000 (or the port specified in your app)
+
+🧩 Project Structure
+
+PathPixel/
+│
+├─ controllers/    # Route handlers and business logic
+├─ models/         # MongoDB models
+├─ routes/         # Express route definitions
+├─ views/          # EJS templates for dynamic pages
+├─ utils/          # Utility functions
+├─ app.js          # Main application file
+├─ package.json    # Project dependencies
+
+
